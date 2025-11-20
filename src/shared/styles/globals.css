@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --color-base-white: 255 255 255;
+    
+    /* Dark Base Scale */
+    --color-dark-base-100: 0 0 0;
+    --color-dark-base-90: 26 26 26;
+    --color-dark-base-80: 51 51 51;
+    --color-dark-base-70: 77 77 77;
+    --color-dark-base-60: 102 102 102;
+    --color-dark-base-50: 128 128 128;
+    --color-dark-base-40: 153 153 153;
+    --color-dark-base-30: 179 179 179;
+    --color-dark-base-20: 204 204 204;
+    --color-dark-base-10: 230 230 230;
+
+    /* Primary Colors - #053D27 (Dark Green) */
+    --color-primary-10: 234 246 242;
+    --color-primary-20: 213 237 229;
+    --color-primary-30: 170 219 203;
+    --color-primary-40: 128 201 177;
+    --color-primary-50: 85 183 151;
+    --color-primary-60: 64 138 113;
+    --color-primary-70: 42 92 75;
+    --color-primary-80: 21 46 38;
+    --color-primary-90: 11 31 25;
+    --color-primary: 5 61 39;
+
+    /* Secondary Colors - #FFFFFF (White) */
+    --color-secondary-100: 255 255 255;
+    --color-secondary-90: 242 242 242;
+    --color-secondary-80: 229 229 229;
+    --color-secondary-70: 217 217 217;
+    --color-secondary-60: 204 204 204;
+    --color-secondary-50: 191 191 191;
+    --color-secondary-40: 178 178 178;
+    --color-secondary-30: 165 165 165;
+    --color-secondary-20: 153 153 153;
+    --color-secondary-10: 140 140 140;
+
+    /* Tertiary Colors - #FAB403 (Yellow/Gold) */
+    --color-tertiary-10: 255 250 230;
+    --color-tertiary-20: 254 245 204;
+    --color-tertiary-30: 253 235 153;
+    --color-tertiary-40: 252 225 102;
+    --color-tertiary-50: 251 215 51;
+    --color-tertiary-60: 250 180 3;
+    --color-tertiary-70: 200 144 2;
+    --color-tertiary-80: 150 108 2;
+    --color-tertiary-90: 100 72 1;
+    --color-tertiary: 250 180 3;
+
+    /* Fresh Green (Success) */
+    --color-fresh-green-10: 240 253 244;
+    --color-fresh-green-20: 220 252 231;
+    --color-fresh-green-30: 187 247 208;
+    --color-fresh-green-40: 134 239 172;
+    --color-fresh-green-50: 74 222 128;
+    --color-fresh-green-60: 34 197 94;
+    --color-fresh-green-70: 22 163 74;
+    --color-fresh-green-80: 21 128 61;
+    --color-fresh-green-90: 20 83 45;
+    --color-fresh-green: 34 197 94;
+
+    /* Soft Green */
+    --color-soft-green: 144 238 144;
+
+    /* Error Red */
+    --color-error-10: 254 242 242;
+    --color-error-20: 254 226 226;
+    --color-error-30: 254 202 202;
+    --color-error-40: 252 165 165;
+    --color-error-50: 248 113 113;
+    --color-error-60: 239 68 68;
+    --color-error-70: 220 38 38;
+    --color-error-80: 185 28 28;
+    --color-error-90: 153 27 27;
+    --color-error: 220 38 38;
+
+    /* Input Colors */
+    --color-input-stroke: 209 213 219;
+    --color-input-filled: 249 250 251;
+    --color-toggle-filled: 5 61 39;
+
+    /* Inactive Colors */
+    --color-inactive: 156 163 175;
+    --color-inactive-2: 209 213 219;
+
+    /* Gradients */
+    --gradient-1-start: 5 61 39;
+    --gradient-1-end: 42 92 75;
+    --gradient-2-start: 250 180 3;
+    --gradient-2-end: 251 215 51;
+    --gradient-3-start: 5 61 39;
+    --gradient-3-end: 34 197 94;
+    --gradient-4-start: 144 238 144;
+    --gradient-4-end: 240 253 244;
+    --gradient-5-start: 34 197 94;
+    --gradient-5-end: 250 180 3;
+    --gradient-6-start: 5 61 39;
+    --gradient-6-end: 250 180 3;
+    --gradient-progress-bar: 5 61 39;
+    --gradient-progress-bar-2: 250 180 3;
+
+    /* Neutral Colors - Light Mode */
+    --color-background-lighter: 255 255 255;
+    --color-background-light: 249 250 251;
+    --color-background-dark: 243 244 246;
+    --color-background-darker: 229 231 235;
+
+    --color-surface-lighter: 255 255 255;
+    --color-surface-light: 249 250 251;
+    --color-surface-dark: 243 244 246;
+    --color-surface-darker: 229 231 235;
+
+    --color-text-primary: 0 0 0;
+    --color-text-secondary: 77 77 77;
+    --color-text-tertiary: 128 128 128;
+    --color-text-inverse: 255 255 255;
+
+    --color-border-light: 230 230 230;
+    --color-border-medium: 204 204 204;
+    --color-border-dark: 179 179 179;
+  }
+
+  .dark {
+    /* Neutral Colors - Dark Mode */
+    --color-background-lighter: 51 51 51;
+    --color-background-light: 26 26 26;
+    --color-background-dark: 0 0 0;
+    --color-background-darker: 0 0 0;
+
+    --color-surface-lighter: 77 77 77;
+    --color-surface-light: 51 51 51;
+    --color-surface-dark: 26 26 26;
+    --color-surface-darker: 0 0 0;
+
+    --color-text-primary: 255 255 255;
+    --color-text-secondary: 204 204 204;
+    --color-text-tertiary: 153 153 153;
+    --color-text-inverse: 0 0 0;
+
+    --color-border-light: 77 77 77;
+    --color-border-medium: 102 102 102;
+    --color-border-dark: 128 128 128;
+  }
+
+  body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    background-color: rgb(var(--color-background-light));
+    color: rgb(var(--color-text-primary));
+  }
+}
