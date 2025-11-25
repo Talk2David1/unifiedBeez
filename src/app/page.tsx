@@ -60,9 +60,9 @@ export default function HomePage() {
           <Image src="/icons/social/whatsapp.png" alt="WhatsApp" width={48} height={48} />
           <Image src="/icons/social/facebook.png" alt="Facebook" width={48} height={48} />
           <Image src="/icons/social/instagram.png" alt="Instagram" width={48} height={48} />
-          <Image src="/icons/social/messenger.png" alt="Messenger" width={48} height={48} />
+          <Image src="/icons/social/zoho.png" alt="Zoho" width={48} height={48} />
           <Image src="/icons/social/chat.png" alt="Chat" width={48} height={48} />
-          <Image src="/icons/social/telegram.png" alt="Telegram" width={48} height={48} />
+          <Image src="/icons/social/Calendly.png" alt="Calendly" width={48} height={48} />
           <Image src="/icons/social/slack.png" alt="Slack" width={48} height={48} />
           <Image src="/icons/social/shopify.png" alt="Shopify" width={48} height={48} />
           <Image src="/icons/social/paypal.png" alt="PayPal" width={48} height={48} />
