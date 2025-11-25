@@ -1,53 +1,71 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  const slides = [
-    { src: '/images/illustrations/slide-1.png', alt: 'UnifiedBeez AI messaging' },
-    { src: '/images/illustrations/side-2.png', alt: 'UnifiedBeez collaboration' },
-    { src: '/images/illustrations/slide-3.png', alt: 'UnifiedBeez automation' },
-    { src: '/images/illustrations/slide-4.png', alt: 'UnifiedBeez analytics' },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   return (
-    <main className="min-h-screen flex">
-      {/* Left Column - Background Image with Animated Slides */}
-      <div
-        className="w-1/2 min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center p-8"
-        style={{ backgroundImage: "url('/images/backgrounds/Left Frame.png')" }}
-      >
-        <div className="relative w-full max-w-xl aspect-square">
-          {slides.map((slide, index) => (
+    <main className="min-h-screen flex items-center justify-center bg-white">
+      <div className="flex flex-col items-center justify-center">
+        {/* Card Container */}
+        <div
+          className="flex flex-col items-center"
+          style={{
+            width: '28rem',
+            padding: '2rem',
+            gap: '1rem',
+            borderRadius: '1.5rem',
+            background: 'linear-gradient(165deg, #E6FAF2 -11.22%, #E3CF9B 219.35%)',
+            boxShadow: '0 1px 2px 0 rgba(16, 24, 40, 0.05)',
+          }}
+        >
+          {/* Logo */}
+          <div className="mb-4">
             <Image
-              key={slide.src}
-              src={slide.src}
-              alt={slide.alt}
-              fill
-              sizes="(max-width: 768px) 80vw, (max-width: 1280px) 40vw, 600px"
-              priority={index === 0}
-              className={`object-contain transition-opacity duration-1000 ease-in-out ${
-                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
+              src="/logos/primary/UNIFIEDBEEZ LOGO PRIMARY 1 1.png"
+              alt="UnifiedBeez Logo"
+              width={180}
+              height={54}
+              className="object-contain"
             />
-          ))}
+          </div>
+          <h1 className="text-xl font-bold text-center">Setup up your account</h1>
+          <p className="text-sm text-center text-gray-600">
+            Let us set up your UnifiedBeez Account
+          </p>
+
+          {/* Copilot Button */}
+          <Link href="/copilot" className="w-full no-underline">
+            <button className="w-full flex items-center justify-center gap-2 btn-primary">
+              <span>Let Beezaro Set Everything Up For Me</span>
+              <Image src="/logos/secondary/BEE ICON svg 1.png" alt="Bee" width={20} height={20} />
+            </button>
+          </Link>
+
+          {/* Manual Setup Button */}
+          <Link href="/manual" className="w-full">
+            <button className="w-full btn-tertiary">
+              Customize It Myself Instead {'>'}
+            </button>
+          </Link>
+
+          {/* Skip for now */}
+          <button className="w-full btn-white">
+            Skip for now
+          </button>
         </div>
-      </div>
-      
-      {/* Right Column - Content */}
-      <div className="w-1/2 min-h-screen flex items-center justify-center p-12 overflow-y-auto">
-        <div className="max-w-2xl w-full space-y-8">
+
+        {/* Social Media Icons */}
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <Image src="/icons/social/whatsapp.png" alt="WhatsApp" width={48} height={48} />
+          <Image src="/icons/social/facebook.png" alt="Facebook" width={48} height={48} />
+          <Image src="/icons/social/instagram.png" alt="Instagram" width={48} height={48} />
+          <Image src="/icons/social/messenger.png" alt="Messenger" width={48} height={48} />
+          <Image src="/icons/social/chat.png" alt="Chat" width={48} height={48} />
+          <Image src="/icons/social/telegram.png" alt="Telegram" width={48} height={48} />
+          <Image src="/icons/social/slack.png" alt="Slack" width={48} height={48} />
+          <Image src="/icons/social/shopify.png" alt="Shopify" width={48} height={48} />
+          <Image src="/icons/social/paypal.png" alt="PayPal" width={48} height={48} />
         </div>
       </div>
     </main>
