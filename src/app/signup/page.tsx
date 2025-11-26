@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { SignupForm } from '@/features/auth/components/SignupForm';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
