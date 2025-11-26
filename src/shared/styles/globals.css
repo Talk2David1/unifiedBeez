@@ -42,6 +42,19 @@
     cursor: pointer;
   }
   
+  .btn-white-outline {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    border: 1px solid #000000;
+    cursor: pointer;
+  }
+  
   .animate-scroll {
     animation: scroll 30s linear infinite;
   }
