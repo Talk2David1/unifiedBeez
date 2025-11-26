@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { SocialIconsBar } from '@/shared/components';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white">
-      <div className="flex flex-col items-center justify-center">
+    <main className="min-h-screen flex flex-col bg-white overflow-x-hidden">
+      <div className="flex-1 flex items-center justify-center">
         {/* Card Container */}
         <div
           className="flex flex-col items-center"
@@ -20,7 +21,7 @@ export default function HomePage() {
           }}
         >
           {/* Logo */}
-          <div className="mb-4">
+          <div>
             <Image
               src="/logos/primary/UNIFIEDBEEZ LOGO PRIMARY 1 1.png"
               alt="UnifiedBeez Logo"
@@ -29,10 +30,13 @@ export default function HomePage() {
               className="object-contain"
             />
           </div>
-          <h1 className="text-xl font-bold text-center">Setup up your account</h1>
-          <p className="text-sm text-center text-gray-600">
+
+          <div>
+            <h1 className="text-xl font-bold text-center m-0">Setup up your account</h1>
+          <p className="text-sm text-center text-gray-600 m-0">
             Let us set up your UnifiedBeez Account
           </p>
+          </div>
 
           {/* Copilot Button */}
           <Link href="/copilot" className="w-full no-underline">
@@ -54,19 +58,11 @@ export default function HomePage() {
             Skip for now
           </button>
         </div>
+      </div>
 
-        {/* Social Media Icons */}
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <Image src="/icons/social/whatsapp.png" alt="WhatsApp" width={48} height={48} />
-          <Image src="/icons/social/facebook.png" alt="Facebook" width={48} height={48} />
-          <Image src="/icons/social/instagram.png" alt="Instagram" width={48} height={48} />
-          <Image src="/icons/social/zoho.png" alt="Zoho" width={48} height={48} />
-          <Image src="/icons/social/chat.png" alt="Chat" width={48} height={48} />
-          <Image src="/icons/social/Calendly.png" alt="Calendly" width={48} height={48} />
-          <Image src="/icons/social/slack.png" alt="Slack" width={48} height={48} />
-          <Image src="/icons/social/shopify.png" alt="Shopify" width={48} height={48} />
-          <Image src="/icons/social/paypal.png" alt="PayPal" width={48} height={48} />
-        </div>
+      {/* Social Media Icons - Footer */}
+      <div className="pb-8">
+        <SocialIconsBar className="mt-0" />
       </div>
     </main>
   );
