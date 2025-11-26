@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Image from 'next/image';
 import { Input, Button } from '@/shared/components';
 import { signupSchema, type SignupFormData } from '../schemas/signup.schema';
 import { useSignup } from '../hooks/useSignup';
