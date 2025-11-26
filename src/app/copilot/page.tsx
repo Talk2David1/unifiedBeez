@@ -26,8 +26,8 @@ export default function CopilotOnboardingPage() {
             I'll set everything up for you in just a few questions. Ready?
           </p>
 
+          <div className="flex flex-col w-full" style={{ gap: '1.5rem' }}>
             {/* Yes, let's go Button */}
-            
             <Link href="/copilot/onboarding" className="w-full no-underline block">
               <button className="w-full btn-primary">
                 Yes, let's go
@@ -40,7 +40,7 @@ export default function CopilotOnboardingPage() {
                 Show me the manual setup instead
               </button>
             </Link>
-          
+          </div>
         </div>
       </div>
 

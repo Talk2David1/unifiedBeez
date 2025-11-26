@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import {Container, ToggleButtons, SocialButton, TestimonialCard } from '@/shared/components';
+import {Container, ToggleButtons, SocialButton, TestimonialCard, SocialIconsBar } from '@/shared/components';
 import { SignupForm } from '@/features/auth/components/SignupForm';
 
 export default function ManualOnboardingPage() {
